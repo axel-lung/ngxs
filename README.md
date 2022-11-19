@@ -1,27 +1,26 @@
-# Ngxs
+# NGXS Template
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.3.
+## 1.0 Introduction
+This is a simple project to carry out state management and facade pattern in angular project.
+This project shows how to use action, select, state in a shared module and then import it in your components.
 
-## Development server
+## 2.0 Architecture
+### 2.1 Core module
+* Auth folder : is used to implement authentication services
+* guard folder : is used to add your guards routes
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### 2.2 Protected module
+Here you can add your private home.
+For example, if you want to create a back admin panel that must be protected.
 
-## Code scaffolding
+### 2.3 Public module
+Here you can add all of public component that can be accessed by anyone.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### 2.4 Shared module
+Create a folder for each foncitonnality and add :
+* models folder : to store models class/interface
+* services folder : to store services linked by your fonctionnality
+* state folder : where you can have your facade patter, action class, select class and state class.
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## 3.0 State Management Process
+![alt text](https://490253082-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-L9CoGJCq3UCfKJ7RCUg-347405460%2Fuploads%2Fgit-blob-7371002ded66c4455ca986a4c8e7c1f6849ffef9%2Fdiagram.png?alt=media)
